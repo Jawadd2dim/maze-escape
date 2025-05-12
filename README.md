@@ -66,7 +66,7 @@ The NPC uses a decision tree to respond to the player:
 3.Memory: Tracks interactions using has_met_player and interaction_count variables.
 
 
-Save/Load System
+##Save/Load System
 Saved Data:
 Current level and player position.
 NPC interaction history.
@@ -78,7 +78,7 @@ How to Reset: Delete savegame.json or use the "New Game" option.
 
 
 
-Credits
+##Credits
 Code & Systems
 *A Pathfinding**: Adapted from Patel, A. (2005). A Pathfinding for Beginners.
 FSM Architecture: Inspired by Millington, I. (2019). Artificial Intelligence for Games.
