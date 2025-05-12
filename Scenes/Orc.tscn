@@ -1,0 +1,188 @@
+[gd_scene load_steps=23 format=3 uid="uid://nnijbp5trlbu"]
+
+[ext_resource type="Script" uid="uid://m8ck28c64w0y" path="res://Scripts/F-NPC.gd" id="1_1x8oc"]
+[ext_resource type="Texture2D" uid="uid://dbqw6pf1e5a11" path="res://Assets/Orc.png" id="2_1x8oc"]
+[ext_resource type="PackedScene" uid="uid://c7caciwwphtkn" path="res://ui/DialogueUI.tscn" id="3_1x8oc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dat08"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iviw"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb552"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c7ed"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h1l3"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6et41"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwpwq"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pxyq"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55ma6"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nrbs"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c420"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nmmc"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ecxu"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjeer"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p612"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lb25"]
+atlas = ExtResource("2_1x8oc")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dat08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dat08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7iviw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb552")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c7ed")
+}],
+"loop": true,
+"name": &"Idle_Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h1l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6et41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwpwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pxyq")
+}],
+"loop": true,
+"name": &"Idle_Front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55ma6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nrbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c420")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nmmc")
+}],
+"loop": true,
+"name": &"Idle_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ecxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjeer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4p612")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lb25")
+}],
+"loop": true,
+"name": &"Idle_Right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qkx3"]
+size = Vector2(9, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qkx3"]
+radius = 25.02
+
+[node name="Orc" type="CharacterBody2D" groups=["npc"]]
+collision_layer = 8
+script = ExtResource("1_1x8oc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_dat08")
+animation = &"Idle_Front"
+frame_progress = 0.570381
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 6.5)
+shape = SubResource("RectangleShape2D_1qkx3")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_1qkx3")
+
+[node name="DialogueUI" parent="." instance=ExtResource("3_1x8oc")]
+
+[node name="InteractionLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -23.0
+offset_right = 98.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+text = "Press E to talk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

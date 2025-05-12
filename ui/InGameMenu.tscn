@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhmv0fy8o4wtm"]
+
+[ext_resource type="Theme" uid="uid://dw65agedwcaxa" path="res://UITheme.tres" id="1_wppbk"]
+[ext_resource type="Script" uid="uid://dgwsmhianchtt" path="res://ui/InGameMenu.gd" id="2_51pvp"]
+
+[node name="InGameMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wppbk")
+script = ExtResource("2_51pvp")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.784314)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Game Paused"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume Game"
+
+[node name="SaveButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save Game"
+
+[node name="MainMenuButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Return to Main Menu"
+
+[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+title = "Save Before Exiting?"
+initial_position = 2
+size = Vector2i(625, 100)
+ok_button_text = "Yes, Save"
+dialog_text = "Would you like to save your game before returning to the main menu?"
+cancel_button_text = "No, Don't Save"
+
+[node name="SaveConfirmationLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 24.0
+offset_right = 100.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.247059, 0.8, 0.25098, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.501961)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+text = "Game Saved!"
+horizontal_alignment = 1

@@ -1,0 +1,11 @@
+# ui/victory_screen.gd
+extends Control
+
+func _ready():
+    $AnimationPlayer.play("fade_in")
+
+func _on_main_menu_button_pressed():
+    GameManager.exit_to_main_menu()
+
+func _on_quit_button_pressed():
+    GameManager.quit_game()

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyur2a32nv1ap"]
+
+[ext_resource type="Script" uid="uid://d3mlra1rardju" path="res://Scripts/ExitPortal.gd" id="1_jf1ts"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jf1ts"]
+radius = 7.0
+
+[node name="ExitPortal" type="Area2D"]
+collision_layer = 64
+script = ExtResource("1_jf1ts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.376462, 1, 0.853125, 1)
+shape = SubResource("CircleShape2D_jf1ts")

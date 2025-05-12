@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7caciwwphtkn"]
+
+[ext_resource type="Script" uid="uid://uij4s21475e4" path="res://ui/dialogue_ui.gd" id="1_fb5rf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7f0b"]
+bg_color = Color(0.121569, 0.121569, 0.141176, 0.882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.294118, 0.294118, 0.294118, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.109804)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kv0d"]
+bg_color = Color(0.32549, 0.32549, 0.32549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="DialogueUI2" type="CanvasLayer" groups=["dialogue_ui"]]
+script = ExtResource("1_fb5rf")
+
+[node name="DialoguePanel" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -274.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m7f0b")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialoguePanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NPCName" type="Label" parent="DialoguePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.870588, 0.870588, 0.870588, 1)
+theme_override_font_sizes/font_size = 18
+text = "NPC Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialoguePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Portrait" type="TextureRect" parent="DialoguePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogueText" type="Label" parent="DialoguePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 18
+text = "Dialogue text goes here..."
+autowrap_mode = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialoguePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ContinueIndicator" type="Panel" parent="DialoguePanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kv0d")
+
+[node name="Label" type="Label" parent="DialoguePanel/MarginContainer/VBoxContainer/ContinueIndicator"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TypewriterTimer" type="Timer" parent="."]
+wait_time = 0.03
+one_shot = true
