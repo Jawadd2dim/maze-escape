@@ -40,6 +40,10 @@
 Option 2: Pre-Built Executables
 Download the latest release
 ** Release **
+```
+https://github.com/Jawadd2dim/maze-escape/releases
+
+```
 
 
 
