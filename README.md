@@ -66,31 +66,31 @@ The NPC uses a decision tree to respond to the player:
 3.Memory: Tracks interactions using has_met_player and interaction_count variables.
 
 
-##Save/Load System
-Saved Data:
-Current level and player position.
-NPC interaction history.
-Custom keybindings.
-File Location:
-Saved to user://savegame.json (Godot’s user data directory).
-How to Reset: Delete savegame.json or use the "New Game" option.
+#Save/Load System
+  *Saved Data:
+  *Current level and player position.
+  *NPC interaction history.
+  *Custom keybindings.
+  *File Location:
+  *Saved to user://savegame.json (Godot’s user data directory).
+  *How to Reset: Delete savegame.json or use the "New Game" option.
 
 
 
 
-##Credits
-Code & Systems
-*A Pathfinding**: Adapted from Patel, A. (2005). A Pathfinding for Beginners.
-FSM Architecture: Inspired by Millington, I. (2019). Artificial Intelligence for Games.
-Godot Tutorials: KidsCanCode, GDQuest.
+#Credits
+*Code & Systems
+*A* Pathfinding: Adapted from Patel, A. (2005). A Pathfinding for Beginners.
+*FSM Architecture: Inspired by Millington, I. (2019). Artificial Intelligence for Games.
+*Godot Tutorials: KidsCanCode, GDQuest.
 
-Assets
-Art: Kenney.nl (CC0 1.0 Universal).
-Fonts: Google Fonts (Open Font License).
-
-
+#Assets
+*Art: Kenney.nl (CC0 1.0 Universal).
+*Fonts: Google Fonts (Open Font License).
 
 
 
 
-Created by Muhammad Jawad Ahmed as part of an Undergraduate Project.
+
+
+**Created by Muhammad Jawad Ahmed as part of an Undergraduate Project.**
