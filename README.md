@@ -42,7 +42,8 @@ Download the latest release
 ** Release **
 
 
-Controls
+
+### Controls
 Action                	Default Key
 Move                      	WASD
 Interact  (NPC)             	E
@@ -52,7 +53,7 @@ Load Game                   	F9
 Customize keys in the Settings Menu.
 
 
-NPC Interaction System
+### NPC Interaction System
 The NPC uses a decision tree to respond to the player:
 
 1.First Interaction:
@@ -66,7 +67,7 @@ The NPC uses a decision tree to respond to the player:
 3.Memory: Tracks interactions using has_met_player and interaction_count variables.
 
 
-#Save/Load System
+### Save/Load System
   *Saved Data:
   *Current level and player position.
   *NPC interaction history.
@@ -78,13 +79,13 @@ The NPC uses a decision tree to respond to the player:
 
 
 
-#Credits
+## Credits
 *Code & Systems
 *A* Pathfinding: Adapted from Patel, A. (2005). A Pathfinding for Beginners.
 *FSM Architecture: Inspired by Millington, I. (2019). Artificial Intelligence for Games.
 *Godot Tutorials: KidsCanCode, GDQuest.
 
-#Assets
+## Assets
 *Art: Kenney.nl (CC0 1.0 Universal).
 *Fonts: Google Fonts (Open Font License).
 
