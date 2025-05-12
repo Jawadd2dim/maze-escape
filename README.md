@@ -71,7 +71,7 @@ The NPC uses a decision tree to respond to the player:
 3.Memory: Tracks interactions using has_met_player and interaction_count variables.
 
 
-### Save/Load System
+## Save/Load System
   *Saved Data:
   *Current level and player position.
   *NPC interaction history.
